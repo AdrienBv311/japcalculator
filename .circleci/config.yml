@@ -10,6 +10,9 @@ jobs:
           name: Installer les dependances
           command: npm install
       - run:
+          name: Audit de securite
+          command: npm audit || true
+      - run:
           name: Lancer les tests
           command: CI=true npm test
       - run:
